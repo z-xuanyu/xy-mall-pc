@@ -1,0 +1,48 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .js 和 .vue 的文件",
+        "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --fix",
+        "prettier:comment": "自动格式化当前目录下的所有文件",
+        "prettier": "prettier --write",
+        "commit:comment": "引导设置规范化的提交信息",
+        "commit": "git-cz"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.0.2",
+        "@commitlint/config-conventional": "^17.0.2",
+        "@nuxtjs/tailwindcss": "^5.1.2",
+        "@typescript-eslint/eslint-plugin": "^5.27.0",
+        "@typescript-eslint/parser": "^5.27.0",
+        "autoprefixer": "^10.4.7",
+        "commitizen": "^4.2.4",
+        "commitlint-config-cz": "^0.13.3",
+        "cz-conventional-changelog": "^3.3.0",
+        "cz-customizable": "^6.3.0",
+        "eslint": "^8.16.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-vue": "^9.0.1",
+        "husky": "^8.0.1",
+        "lint-staged": "^12.5.0",
+        "nuxt": "3.0.0-rc.3",
+        "postcss": "^8.4.14",
+        "prettier": "^2.6.2",
+        "tailwindcss": "^3.0.24"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts}": [
+            "npm run eslint",
+            "npm run prettier"
+        ]
+    }
+}
