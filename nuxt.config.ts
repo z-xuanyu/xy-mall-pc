@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-01 11:56:49
- * @LastEditTime: 2022-06-01 17:56:02
+ * @LastEditTime: 2022-06-07 15:35:01
  * @Description: Modify here please
  */
 import { defineNuxtConfig } from 'nuxt';
@@ -13,6 +13,22 @@ const lifecycle = process.env.npm_lifecycle_event;
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      meta: [
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
+        },
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://at.alicdn.com/t/font_3454956_kwhkuf1tkc.css',
+        },
+      ],
+    },
+  },
   modules: ['@nuxtjs/tailwindcss', 'unplugin-icons/nuxt'],
   build: {
     transpile:
