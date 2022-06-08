@@ -21,7 +21,7 @@ function jumpLogin() {
   <div class="header-wrap">
     <div class="h-[40px] w-full bg-[#282828]">
       <div
-        class="w-[1226px] mx-auto flex justify-between items-center text-white"
+        class="w-[1200px] mx-auto flex justify-between items-center text-white"
       >
         <div class="text-xs leading-[40px]">收藏</div>
         <div class="space-x-5 text-xs leading-[40px]">
@@ -33,7 +33,7 @@ function jumpLogin() {
       </div>
     </div>
     <div class="h-[96px] bg-white">
-      <div class="w-[1226px] mx-auto flex justify-between items-center">
+      <div class="w-[1200px] mx-auto flex justify-between items-center">
         <div class="flex items-center">
           <div class="text-4xl logo leading-[96px]">XYMALL</div>
           <ul class="flex ml-10 space-x-8">

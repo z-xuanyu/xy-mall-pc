@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-01 11:56:49
- * @LastEditTime: 2022-06-07 15:35:01
+ * @LastEditTime: 2022-06-07 16:54:57
  * @Description: Modify here please
  */
 import { defineNuxtConfig } from 'nuxt';
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://at.alicdn.com/t/font_3454956_kwhkuf1tkc.css',
+          href: 'https://at.alicdn.com/t/font_3454956_2feo3spfiou.css',
         },
       ],
     },

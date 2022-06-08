@@ -28,7 +28,7 @@ function handleLogin() {
   <div class="login-page">
     <!-- 顶部 -->
     <div class="h-[110px]">
-      <div class="w-[1226px] mx-auto flex justify-between">
+      <div class="w-[1200px] mx-auto flex justify-between">
         <div class="text-2xl logo leading-[110px]">XYMALL</div>
         <div class="flex leading-[110px] space-x-10">
           <div>

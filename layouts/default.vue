@@ -20,7 +20,7 @@ import TheHeader from './components/TheHeader.vue';
   <div class="flex flex-col justify-between layout bg-[#f9f9f9]">
     <!-- 头部 -->
     <TheHeader />
-    <div class="w-[1226px] mx-auto">
+    <div class="w-[1200px] mx-auto">
       <slot />
     </div>
     <!-- 底部 -->
