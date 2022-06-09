@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-01 16:44:52
- * @LastEditTime: 2022-06-09 10:44:19
+ * @LastEditTime: 2022-06-09 10:58:06
  * @Description: Modify here please
 -->
 <script setup lang="ts"></script>
@@ -49,6 +49,23 @@
       <div class="py-10 space-y-2 text-sm text-center">
         <p>阿宇微信：969718197 博客地址：https://www.zhouxuanyu.com</p>
         <p>Copyright © 2013-2020 ICP备14011498号-3</p>
+      </div>
+    </div>
+    <!-- 悬浮按钮提示 -->
+    <div
+      class="w-[70px] h-[222px] shadow bg-white fixed right-0 bottom-[15%] z-50 cursor-pointer p-2 text-gray-600"
+    >
+      <div class="flex flex-col items-center justify-center h-[74px] border-b">
+        <i class="text-2xl iconfont icon-hanghuo"></i>
+        <span class="text-xs">关注微信</span>
+      </div>
+      <div class="flex flex-col items-center justify-center h-[74px] border-b">
+        <i class="text-2xl iconfont icon-hanghuo"></i>
+        <span class="text-xs">购物车</span>
+      </div>
+      <div class="flex flex-col items-center justify-center h-[74px]">
+        <i class="text-2xl iconfont icon-hanghuo"></i>
+        <span class="text-xs">回到顶部</span>
       </div>
     </div>
   </div>
