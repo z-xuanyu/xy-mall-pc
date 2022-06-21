@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-01 16:44:44
- * @LastEditTime: 2022-06-09 14:23:53
+ * @LastEditTime: 2022-06-21 11:39:47
  * @Description: Modify here please
 -->
 <script setup lang="ts">
@@ -26,9 +26,18 @@ function jumpLogin() {
         <div class="text-xs leading-[40px]">收藏</div>
         <div class="space-x-5 text-xs leading-[40px]">
           <span class="cursor-pointer" @click="jumpLogin">注册/登陆</span>
-          <span>我的订单</span>
-          <span>我的余额</span>
-          <span>我的购物车</span>
+          <NuxtLink class="text-gray-300 cursor-pointer hover:text-white">
+            我的订单
+          </NuxtLink>
+          <NuxtLink class="text-gray-300 cursor-pointer hover:text-white">
+            我的余额
+          </NuxtLink>
+          <NuxtLink
+            class="text-gray-300 cursor-pointer hover:text-white"
+            to="/cart"
+          >
+            我的购物车
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -37,7 +46,9 @@ function jumpLogin() {
         <div class="flex items-center">
           <div class="text-4xl logo leading-[96px]">XYMALL</div>
           <ul class="flex ml-10 space-x-8">
-            <li class="text-red-500">首页</li>
+            <li>
+              <NuxtLink class="cursor-pointer" to="/"> 首页 </NuxtLink>
+            </li>
             <li>产品分类</li>
             <li>限时秒杀</li>
             <li>限时预售</li>

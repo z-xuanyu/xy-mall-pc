@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-01 11:56:49
- * @LastEditTime: 2022-06-07 16:54:57
+ * @LastEditTime: 2022-06-21 14:53:53
  * @Description: Modify here please
  */
 import { defineNuxtConfig } from 'nuxt';
