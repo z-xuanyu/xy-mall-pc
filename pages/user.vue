@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-22 10:00:42
- * @LastEditTime: 2022-06-22 10:56:30
+ * @LastEditTime: 2022-06-22 16:17:42
  * @Description: Modify here please
 -->
 <script lang="ts">
@@ -58,6 +58,11 @@ const activePath = ref(route.fullPath);
 function handleClick(path: string) {
   activePath.value = path;
 }
+
+// 当前路由导航文本
+const currentNavText = computed(
+  () => menus.find((item) => item.path === activePath.value).name,
+);
 </script>
 
 <template>
@@ -66,9 +71,12 @@ function handleClick(path: string) {
     <div class="py-8 space-x-2 text-sm">
       <NuxtLink class="text-black" to="/">首页</NuxtLink>
       <NuxtLink class="text-black">></NuxtLink>
-      <NuxtLink class="text-black" to="/user">个人中心</NuxtLink>
-      <NuxtLink class="text-gray-400">账号管理</NuxtLink>
+      <NuxtLink class="text-black" to="/user" @click="activePath = '/user'"
+        >个人中心</NuxtLink
+      >
+      <NuxtLink class="text-gray-400">{{ currentNavText }}</NuxtLink>
     </div>
+    <!-- 用户中心 -->
     <div class="flex">
       <div class="w-[180px] mr-3">
         <!-- 头像 -->
