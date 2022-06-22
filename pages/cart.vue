@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-21 11:34:44
- * @LastEditTime: 2022-06-21 15:42:24
+ * @LastEditTime: 2022-06-22 10:04:37
  * @Description: 购物车页面
 -->
 <script lang="ts">

@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-01 16:44:44
- * @LastEditTime: 2022-06-21 11:39:47
+ * @LastEditTime: 2022-06-21 16:06:09
  * @Description: Modify here please
 -->
 <script setup lang="ts">
@@ -29,8 +29,11 @@ function jumpLogin() {
           <NuxtLink class="text-gray-300 cursor-pointer hover:text-white">
             我的订单
           </NuxtLink>
-          <NuxtLink class="text-gray-300 cursor-pointer hover:text-white">
-            我的余额
+          <NuxtLink
+            class="text-gray-300 cursor-pointer hover:text-white"
+            to="/user"
+          >
+            用户中心
           </NuxtLink>
           <NuxtLink
             class="text-gray-300 cursor-pointer hover:text-white"
