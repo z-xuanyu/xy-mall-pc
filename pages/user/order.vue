@@ -4,8 +4,8 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-22 09:52:17
- * @LastEditTime: 2022-06-22 14:39:35
- * @Description: Modify here please
+ * @LastEditTime: 2022-06-23 15:00:26
+ * @Description: 用户订单列表
 -->
 <script lang="ts">
 export default {
@@ -32,6 +32,13 @@ const activeIndex = ref<number>(0);
 
 function handleClick(index: number) {
   activeIndex.value = index;
+}
+
+// 跳转订单详情
+function jumpOrderDetail() {
+  navigateTo({
+    path: '/orderDetail',
+  });
 }
 </script>
 
@@ -96,7 +103,10 @@ function handleClick(index: number) {
               <div class="px-4 py-2 text-white bg-red-500 cursor-pointer">
                 立即支付
               </div>
-              <div class="px-4 py-2 text-white bg-red-500 cursor-pointer">
+              <div
+                class="px-4 py-2 text-white bg-red-500 cursor-pointer"
+                @click="jumpOrderDetail"
+              >
                 查看详情
               </div>
             </div>

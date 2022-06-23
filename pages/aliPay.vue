@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-23 14:44:06
- * @LastEditTime: 2022-06-23 14:49:50
+ * @LastEditTime: 2022-06-23 16:33:20
  * @Description: 支付宝支付页面
 -->
 
@@ -16,11 +16,9 @@ export default {
 <script setup lang="ts">
 import { ArrowLeftBold } from '@element-plus/icons-vue';
 import { ElIcon } from 'element-plus';
-
+const router = useRouter();
 function goBack() {
-  navigateTo({
-    path: '/payment',
-  });
+  router.back();
 }
 </script>
 

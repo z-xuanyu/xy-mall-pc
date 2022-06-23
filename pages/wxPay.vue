@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-23 14:08:48
- * @LastEditTime: 2022-06-23 14:48:55
+ * @LastEditTime: 2022-06-23 16:32:47
  * @Description: 微信支付
 -->
 <script lang="ts">
@@ -15,11 +15,10 @@ export default {
 <script setup lang="ts">
 import { ArrowLeftBold } from '@element-plus/icons-vue';
 import { ElIcon } from 'element-plus';
+const router = useRouter();
 
 function goBack() {
-  navigateTo({
-    path: '/payment',
-  });
+  router.back();
 }
 </script>
 
