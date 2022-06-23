@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-09 14:13:10
- * @LastEditTime: 2022-06-21 10:35:26
+ * @LastEditTime: 2022-06-23 11:17:00
  * @Description: Modify here please
 -->
 <script setup lang="ts">
@@ -16,6 +16,12 @@ const num = ref(1);
 
 function handleChange() {
   console.log(48878);
+}
+
+function jumpOrderConfirm() {
+  navigateTo({
+    path: '/orderConfirm',
+  });
 }
 </script>
 
@@ -102,6 +108,7 @@ function handleChange() {
           </div>
           <div
             class="px-10 py-3 text-red-500 border border-red-500 cursor-pointer"
+            @click="jumpOrderConfirm"
           >
             立即购买
           </div>

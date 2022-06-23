@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-21 11:34:44
- * @LastEditTime: 2022-06-22 10:04:37
+ * @LastEditTime: 2022-06-23 11:16:09
  * @Description: 购物车页面
 -->
 <script lang="ts">
@@ -17,6 +17,12 @@ import CartGoodsItem from '@/components/cart/CartGoodsItem.vue';
 import CustomCheckBox from '@/components/common/CustomCheckBox.vue';
 
 const chebox = ref(false);
+
+function jumpOrderConfirm() {
+  navigateTo({
+    path: '/orderConfirm',
+  });
+}
 </script>
 
 <template>
@@ -62,6 +68,7 @@ const chebox = ref(false);
         >
         <span
           class="inline-block text-white bg-red-500 leading-[82px] cursor-pointer px-16"
+          @click="jumpOrderConfirm"
           >去结算</span
         >
       </div>
