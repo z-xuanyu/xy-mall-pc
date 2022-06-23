@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-23 11:23:45
- * @LastEditTime: 2022-06-23 14:12:38
+ * @LastEditTime: 2022-06-23 14:47:56
  * @Description: 订单确认
 -->
 <script lang="ts">
@@ -23,6 +23,12 @@ function jumpPay() {
   if (currentPayType.value === 2) {
     navigateTo({
       path: '/wxPay',
+    });
+  }
+  // 支付宝支付
+  if (currentPayType.value === 3) {
+    navigateTo({
+      path: '/aliPay',
     });
   }
 }

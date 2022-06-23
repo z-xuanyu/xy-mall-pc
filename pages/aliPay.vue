@@ -3,13 +3,14 @@
  * @LastEditors: xuanyu
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
- * @Date: 2022-06-23 14:08:48
- * @LastEditTime: 2022-06-23 14:48:55
- * @Description: 微信支付
+ * @Date: 2022-06-23 14:44:06
+ * @LastEditTime: 2022-06-23 14:49:50
+ * @Description: 支付宝支付页面
 -->
+
 <script lang="ts">
 export default {
-  name: 'WxPayPage',
+  name: 'AliPayPage',
 };
 </script>
 <script setup lang="ts">
@@ -24,7 +25,7 @@ function goBack() {
 </script>
 
 <template>
-  <div class="wx-pay-page">
+  <div class="ali-pay-page">
     <!-- 面包屑导航 -->
     <div class="my-4 space-x-2 text-sm">
       <NuxtLink class="text-black" to="/">首页</NuxtLink>
@@ -37,7 +38,7 @@ function goBack() {
     </div>
     <div class="p-8 bg-white">
       <div class="flex items-center justify-between">
-        <h3>微信支付</h3>
+        <h3>支付宝支付</h3>
         <p class="text-sm text-gray-400">
           应付金额：<span class="text-xl font-bold text-red-500">0.01</span> 元
         </p>
@@ -50,25 +51,23 @@ function goBack() {
             src="../assets/images/qcode.png"
             alt=""
           />
-          <div class="h-[72px] flex items-center justify-center bg-[#04be02]">
+          <div class="h-[72px] flex items-center justify-center bg-[#1676ff]">
             <img
               class="w-[50px] h-[50px] object-cover"
               src="../assets/svg/saoma.svg"
               alt=""
             />
             <div class="ml-8 text-sm text-white">
-              <p>请使用微信扫一扫</p>
+              <p>请使用支付宝扫一扫</p>
               <p>扫描二维码支付</p>
             </div>
           </div>
         </div>
-        <img src="../assets/images/phone.png" alt="" />
+        <img src="../assets/images/alipay.png" alt="" />
       </div>
-      <p class="flex items-center text-blue-500">
+      <p class="flex items-center text-blue-500 cursor-pointer" @click="goBack">
         <el-icon><ArrowLeftBold /></el-icon
-        ><span class="ml-2 cursor-pointer" @click="goBack"
-          >选择其他支付方式</span
-        >
+        ><span class="ml-2">选择其他支付方式</span>
       </p>
     </div>
   </div>
