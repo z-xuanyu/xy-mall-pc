@@ -4,8 +4,8 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-23 10:01:59
- * @LastEditTime: 2022-06-23 11:13:50
- * @Description: Modify here please
+ * @LastEditTime: 2022-06-23 11:27:22
+ * @Description: 订单创建
 -->
 <script lang="ts">
 export default {
@@ -15,6 +15,12 @@ export default {
 <script setup lang="ts">
 import { ElIcon } from 'element-plus';
 import { Check, Plus } from '@element-plus/icons-vue';
+
+function jumpPayment() {
+  navigateTo({
+    path: '/payment',
+  });
+}
 </script>
 
 <template>
@@ -132,6 +138,7 @@ import { Check, Plus } from '@element-plus/icons-vue';
         <button
           type="button"
           class="px-12 py-2 text-white bg-red-500 outline-none"
+          @click="jumpPayment"
         >
           提交订单
         </button>
