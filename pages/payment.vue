@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-23 11:23:45
- * @LastEditTime: 2022-06-23 12:06:23
+ * @LastEditTime: 2022-06-23 14:12:38
  * @Description: 订单确认
 -->
 <script lang="ts">
@@ -17,6 +17,15 @@ import { ElIcon } from 'element-plus';
 import { Check } from '@element-plus/icons-vue';
 
 const currentPayType = ref<number>(1);
+
+function jumpPay() {
+  // 微信支付
+  if (currentPayType.value === 2) {
+    navigateTo({
+      path: '/wxPay',
+    });
+  }
+}
 </script>
 
 <template>
@@ -128,6 +137,7 @@ const currentPayType = ref<number>(1);
         <button
           type="button"
           class="px-12 py-2 text-white bg-red-500 outline-none"
+          @click="jumpPay"
         >
           去支付
         </button>
