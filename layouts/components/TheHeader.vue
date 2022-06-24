@@ -4,16 +4,52 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-01 16:44:44
- * @LastEditTime: 2022-06-21 16:06:09
- * @Description: Modify here please
+ * @LastEditTime: 2022-06-24 10:18:27
+ * @Description: 全局header
 -->
 <script setup lang="ts">
 import { ElIcon } from 'element-plus';
 import { Search } from '@element-plus/icons-vue';
+
+interface NavItem {
+  text: string;
+  path: string;
+}
+
 function jumpLogin() {
   navigateTo({
     path: '/login',
   });
+}
+
+const route = useRoute();
+const currentRoutePath = ref(route.fullPath);
+
+const navList = ref<NavItem[]>([
+  {
+    text: '首页',
+    path: '/',
+  },
+  {
+    text: '产品分类',
+    path: '/category',
+  },
+  {
+    text: '限时秒杀',
+    path: '/seckill',
+  },
+  {
+    text: '限时预售',
+    path: '/presell',
+  },
+  {
+    text: '领取优惠券',
+    path: '/user/receive',
+  },
+]);
+
+function handleClickNav(item: NavItem) {
+  currentRoutePath.value = item.path;
 }
 </script>
 
@@ -47,15 +83,21 @@ function jumpLogin() {
     <div class="h-[96px] bg-white">
       <div class="w-[1200px] mx-auto flex justify-between items-center">
         <div class="flex items-center">
-          <div class="text-4xl logo leading-[96px]">XYMALL</div>
+          <NuxtLink to="/" class="text-black">
+            <div class="text-4xl logo leading-[96px]">XYMALL</div>
+          </NuxtLink>
           <ul class="flex ml-10 space-x-8">
-            <li>
-              <NuxtLink class="cursor-pointer" to="/"> 首页 </NuxtLink>
+            <li v-for="(item, index) in navList" :key="index">
+              <NuxtLink
+                :class="
+                  currentRoutePath === item.path ? 'text-red-500' : 'text-black'
+                "
+                :to="item.path"
+                @click="handleClickNav(item)"
+              >
+                {{ item.text }}
+              </NuxtLink>
             </li>
-            <li>产品分类</li>
-            <li>限时秒杀</li>
-            <li>限时预售</li>
-            <li>领优惠券</li>
           </ul>
         </div>
         <!-- 搜索 -->
