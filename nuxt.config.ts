@@ -1,18 +1,16 @@
 /*
  * @Author: xuanyu
- * @LastEditors: xuanyu
+ * @LastEditors: xuanyu 969718197@qq.com
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-06-01 11:56:49
- * @LastEditTime: 2022-06-21 14:53:53
- * @Description: Modify here please
+ * @LastEditTime: 2023-08-03 10:15:06
+ * @Description: nuxtjs 配置文件
  */
-import { defineNuxtConfig } from 'nuxt';
-
 const lifecycle = process.env.npm_lifecycle_event;
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default defineNuxtConfig({
+export default {
   app: {
     head: {
       meta: [
@@ -29,24 +27,10 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxtjs/tailwindcss', 'unplugin-icons/nuxt'],
+  modules: ['@nuxtjs/tailwindcss'],
   build: {
     transpile:
       lifecycle === 'build' || lifecycle === 'generate' ? ['element-plus'] : [],
   },
   css: ['~/assets/scss/index.scss'],
-  unocss: {
-    uno: true,
-    attributify: true,
-    // preflight: true,
-    icons: {
-      scale: 1.2,
-    },
-    shortcuts: [
-      [
-        'btn',
-        'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50',
-      ],
-    ],
-  },
-});
+};
